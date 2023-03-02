@@ -204,7 +204,7 @@ _Pragma("clang diagnostic pop")
     }
     [NSNotificationCenter.defaultCenter removeObserver:self];
 
-    # _leftEdgeGesture.delegate = nil;
+    // _leftEdgeGesture.delegate = nil;
 }
 
 - (void)notifyWillDealloc
