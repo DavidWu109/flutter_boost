@@ -76,7 +76,7 @@ _Pragma("clang diagnostic pop")
 @property (nonatomic, strong) NSBundle *flbNibBundle;
 @property (nonatomic, assign) BOOL opaque;
 @property (nonatomic, strong) FBVoidCallback removeEventCallback;
-@property (nonatomic, strong) UIScreenEdgePanGestureRecognizer* leftEdgeGesture;
+# @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer* leftEdgeGesture;
 @end
 
 @implementation FBFlutterViewContainer
@@ -204,7 +204,7 @@ _Pragma("clang diagnostic pop")
     }
     [NSNotificationCenter.defaultCenter removeObserver:self];
 
-    _leftEdgeGesture.delegate = nil;
+    # _leftEdgeGesture.delegate = nil;
 }
 
 - (void)notifyWillDealloc
@@ -222,10 +222,10 @@ _Pragma("clang diagnostic pop")
         self.view.backgroundColor = UIColor.whiteColor;
     }
 
-    _leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgeGesture:)];
-    _leftEdgeGesture.edges = UIRectEdgeLeft;
-    _leftEdgeGesture.delegate = self;
-    [self.view addGestureRecognizer:_leftEdgeGesture];
+    # _leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgeGesture:)];
+    # _leftEdgeGesture.edges = UIRectEdgeLeft;
+    # _leftEdgeGesture.delegate = self;
+    # [self.view addGestureRecognizer:_leftEdgeGesture];
 }
 
 - (void)handleLeftEdgeGesture:(UIScreenEdgePanGestureRecognizer *)gesture {
